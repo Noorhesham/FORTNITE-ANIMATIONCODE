@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Counter - Vanilla JS</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: sans-serif;
+        text-align: center;
+      }
+      div {
+        font-size: 2rem;
+      }
+      button {
+        font-size: 1.5rem;
+        margin-top: 10px;
+        padding: 10px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Counter (JavaScript)</h1>
+      <h2 id="counter-display">0</h2>
+      <button id="increment-btn">Click Me!</button>
+    </div>
+
+    <script>
+      // اول خطوة بعرف الفاريبلز المسؤوله عن الابلكيشن
+      let count = 0;
+      // بختار العناصر الي هعملها ابديت
+      const counterDisplay = document.getElementById("counter-display");
+      const incrementButton = document.getElementById("increment-btn");
+      // تعريف لفانكشن بتزود الفاريبل
+      function incrementCounter() {
+        count++;
+        console.log(count);
+        // لو مسحت السطر الي تحت مش هشوف تغيير اللوجيك علي ال ui
+        counterDisplay.textContent = count;
+      }
+
+      incrementButton.addEventListener("click", incrementCounter);
+    </script>
+  </body>
+</html>

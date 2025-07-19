@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+@font-face {
+  font-family: "fortnite";
+  src: url("./assets/fortnite/rr.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "fortnite";
+  src: url("./assets/fortnite/fortnite.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+.fortnite {
+  font-family: "fortnite";
+}
+body {
+  background-color: #000;
+  font-family: "Roboto", sans-serif;
+}
+.fortnite-logo {
+  font-family: "fortnite";
+}
+.clip {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.animated-word {
+  opacity: 0;
+  transform: translate3d(10px, 51px, -60px) rotateY(60deg) rotateX(-40deg);
+  transform-origin: 50% 50% -150px !important;
+  will-change: opacity, transform;
+  perspective: 600px;
+}
